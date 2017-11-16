@@ -16,6 +16,7 @@ module.exports = {
         // apply loaders to files that meet given conditions
         loaders: [{
             test: /\.jsx?$/,
+            exclude: /node_modules/,
             include: path.join(__dirname, '/client/src'),
             loader: 'babel-loader',
             query: {
