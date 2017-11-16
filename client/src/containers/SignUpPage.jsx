@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
-import LoginForm from '../components/LoginForm.jsx';
+import SignUpForm from '../components/SignUpForm';
 
 
-class LoginPage extends React.Component {
+class SignUpPage extends React.Component {
 
     /**
      * Class constructor.
@@ -15,25 +15,13 @@ class LoginPage extends React.Component {
             errors: {},
             user: {
                 email: '',
+                name: '',
                 password: ''
             }
         };
 
         this.processForm = this.processForm.bind(this);
         this.changeUser = this.changeUser.bind(this);
-    }
-
-    /**
-     * Process the form.
-     *
-     * @param {object} event - the JavaScript event object
-     */
-    processForm(event) {
-        // prevent default action. in this case, action is the form submission event
-        event.preventDefault();
-
-        console.log('email:', this.state.user.email);
-        console.log('password:', this.state.user.password);
     }
 
     /**
@@ -52,11 +40,25 @@ class LoginPage extends React.Component {
     }
 
     /**
+     * Process the form.
+     *
+     * @param {object} event - the JavaScript event object
+     */
+    processForm(event) {
+        // prevent default action. in this case, action is the form submission event
+        event.preventDefault();
+
+        console.log('name:', this.state.user.name);
+        console.log('email:', this.state.user.email);
+        console.log('password:', this.state.user.password);
+    }
+
+    /**
      * Render the component.
      */
     render() {
         return (
-            <LoginForm
+            <SignUpForm
                 onSubmit={this.processForm}
                 onChange={this.changeUser}
                 errors={this.state.errors}
@@ -67,4 +69,4 @@ class LoginPage extends React.Component {
 
 }
 
-export default LoginPage;
+export default SignUpPage;
