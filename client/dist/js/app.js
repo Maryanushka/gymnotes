@@ -36551,9 +36551,41 @@ module.exports = exports['default'];
 
 /***/ }),
 /* 256 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/maria/Desktop/gymnotes.git/client/src/components/StartPage.jsx: Adjacent JSX elements must be wrapped in an enclosing tag (9:4)\n\n\u001b[0m \u001b[90m  7 | \u001b[39m\u001b[36mconst\u001b[39m \u001b[33mStartPage\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m (\n \u001b[90m  8 | \u001b[39m    \u001b[33m<\u001b[39m\u001b[33mMain\u001b[39m\u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m    \u001b[33m<\u001b[39m\u001b[33mHeader\u001b[39m\u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 | \u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 | \u001b[39m\n \u001b[90m 12 | \u001b[39m\u001b[0m\n");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Main = __webpack_require__(293);
+
+var _Main2 = _interopRequireDefault(_Main);
+
+var _Header = __webpack_require__(294);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//import getMuiTheme from 'material-ui/styles/getMuiTheme';
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+var StartPage = function StartPage() {
+    return _react2.default.createElement(
+        'div',
+        { className: 'top-bar' },
+        _react2.default.createElement(_Main2.default, null),
+        _react2.default.createElement(_Header2.default, null)
+    );
+};
+
+exports.default = StartPage;
 
 /***/ }),
 /* 257 */
@@ -41117,6 +41149,106 @@ MuiThemeProvider.propTypes = process.env.NODE_ENV !== "production" ? {
 } : {};
 exports.default = MuiThemeProvider;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(128);
+
+var _HomePage = __webpack_require__(151);
+
+var _HomePage2 = _interopRequireDefault(_HomePage);
+
+var _LoginPage = __webpack_require__(230);
+
+var _LoginPage2 = _interopRequireDefault(_LoginPage);
+
+var _SignUpPage = __webpack_require__(245);
+
+var _SignUpPage2 = _interopRequireDefault(_SignUpPage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Main = function Main() {
+    return _react2.default.createElement(
+        'main',
+        null,
+        _react2.default.createElement(
+            _reactRouterDom.Switch,
+            null,
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/', exact: true, component: _HomePage2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _LoginPage2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _SignUpPage2.default })
+        )
+    );
+};
+
+exports.default = Main;
+
+/***/ }),
+/* 294 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(128);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+    return _react2.default.createElement(
+        'header',
+        null,
+        _react2.default.createElement(
+            'nav',
+            null,
+            _react2.default.createElement(
+                'ul',
+                null,
+                _react2.default.createElement(
+                    'li',
+                    null,
+                    _react2.default.createElement(_reactRouterDom.Link, { to: '/' }),
+                    'Home'
+                ),
+                _react2.default.createElement(
+                    'li',
+                    null,
+                    _react2.default.createElement(_reactRouterDom.Link, { to: '/login' }),
+                    'Login'
+                ),
+                _react2.default.createElement(
+                    'li',
+                    null,
+                    _react2.default.createElement(_reactRouterDom.Link, { to: '/signup' }),
+                    'Sign up'
+                )
+            )
+        )
+    );
+};
+exports.default = Header;
 
 /***/ })
 /******/ ]);

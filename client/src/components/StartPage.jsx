@@ -5,8 +5,11 @@ import Main from './Main.jsx';
 import Header from './Header.jsx';
 
 const StartPage = () => (
-    <Main/>
-    <Header/>
+    <div className="top-bar">
+        <Main/>
+        <Header/>
+    </div>
+
 );
 
 
