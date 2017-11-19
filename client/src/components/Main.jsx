@@ -7,9 +7,9 @@ import SignUpPage from '../containers/SignUpPage.jsx';
 const Main = () => (
     <main>
         <Switch>
-            <Route path="/" exact component={HomePage}/>
-            <Route path="/login" component={LoginPage}/>
-            <Route path="/signup" component={SignUpPage}/>
+            <Route exact path='/' render={() => <HomePage/>}/>
+            <Route path="/login" render={() => <LoginPage/>}/>
+            <Route path="/signup" render={() => <SignUpPage/>}/>
         </Switch>
     </main>
 );
